@@ -28,12 +28,12 @@ export class SignupComponent implements OnInit {
      console.log(response);
 
      response.user.updateProfile({
-       displayName : firstname + " " + lastname
+       displayName : firstname + " " + lastname,
        photoURL : "http://api.adorable.io/avatars/" 
      })
-   }).catch((error=>{
-     console.log(error)
-   }))
+   }).catch((error)=>{
+     console.log(error);
+   })
 
  }
 
