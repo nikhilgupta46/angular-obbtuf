@@ -19,7 +19,7 @@ export class AuthService {
     let rn = Math.floor(Math.random()*1000)
      response.user.updateProfile({
        displayName : firstname + " " + lastname,
-       photoURL : "http://api.adorable.io/avatars/"+rn
+       photoURL : "http://api.adorable.io/avatars/"+rn +"/abott@adorable.png"
      }).then(()=>{
        resolve();
      }).catch((error)=>{
