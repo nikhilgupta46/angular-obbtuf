@@ -4,14 +4,16 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import {HomeComponent} from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
-import { HomeComponent } from './home/home.component';
-import { AuthService } from './auth.service';
-import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
-import { CreateComponent } from './create/create.component';
+import { AuthService } from './auth.service';
+import {AppRoutingModule } from './approuting.module';
+import { MenuComponent } from './menu/menu.component';
 import { MyblogsComponent } from './myblogs/myblogs.component';
+import { CreateComponent } from './create/create.component';
+import {NgxEditorModule} from 'ngx-editor';
+import {HttpClientModule} from '@angular/common/http'; 
 let config = {
     apiKey: "AIzaSyATB_vE19LCfsmIfhf1feh1SsaZ8jtKwQE",
     authDomain: "blog8-48335.firebaseapp.com",
@@ -24,8 +26,8 @@ let config = {
 firebase.initializeApp(config)
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, CreateComponent, MyblogsComponent ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ,AppRoutingModule,NgxEditorModule,HttpClientModule],
+  declarations: [ AppComponent,  SignupComponent, LoginComponent, HomeComponent, MenuComponent, MyblogsComponent, CreateComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]
 })

@@ -12,6 +12,9 @@
     "@angular/router": "^8.0.0",
     "core-js": "2",
     "firebase": "^6.2.4",
+    "font-awesome": "^4.7.0",
+    "ngx-bootstrap": "^3.0.1",
+    "ngx-editor": "^4.1.0",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
   },
