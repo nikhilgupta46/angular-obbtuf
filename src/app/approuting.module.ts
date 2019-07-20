@@ -4,7 +4,8 @@ import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {SignupComponent} from './signup/signup.component';
 import {MyblogsComponent} from './myblogs/myblogs.component';
-
+import {ViewComponent} from './view/view.component';
+import {ProfileComponent} from './profile/profile.component';
 const routes : Routes = [{
   path : '' , redirectTo :'home' ,pathMatch :'full'},{
     path : 'home' , component :HomeComponent},{
@@ -15,8 +16,10 @@ const routes : Routes = [{
   path : 'signup' , component : SignupComponent
   },{
     path : 'myblogs' , component : MyblogsComponent},
+
+    {path:'profile/:id',component:ProfileComponent},
     
-    
+    {path: 'view/: postId',component : ViewComponent},
     {
     path : '**' , redirectTo : 'home' 
   }]
