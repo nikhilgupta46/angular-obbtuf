@@ -16,4 +16,5 @@
   <div class="col-sm-7">
     <app-create></app-create>
     </div>
+    <app-post *ngFor="let post of posts" [post]="post" (onDelete)="onDelete()"></app-post>
 </div>

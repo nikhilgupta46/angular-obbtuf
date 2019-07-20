@@ -13,7 +13,8 @@ import { MenuComponent } from './menu/menu.component';
 import { MyblogsComponent } from './myblogs/myblogs.component';
 import { CreateComponent } from './create/create.component';
 import {NgxEditorModule} from 'ngx-editor';
-import {HttpClientModule} from '@angular/common/http'; 
+import {HttpClientModule} from '@angular/common/http';
+import { PostComponent } from './post/post.component'; 
 let config = {
     apiKey: "AIzaSyATB_vE19LCfsmIfhf1feh1SsaZ8jtKwQE",
     authDomain: "blog8-48335.firebaseapp.com",
@@ -27,7 +28,7 @@ firebase.initializeApp(config)
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ,AppRoutingModule,NgxEditorModule,HttpClientModule],
-  declarations: [ AppComponent,  SignupComponent, LoginComponent, HomeComponent, MenuComponent, MyblogsComponent, CreateComponent ],
+  declarations: [ AppComponent,  SignupComponent, LoginComponent, HomeComponent, MenuComponent, MyblogsComponent, CreateComponent, PostComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]
 })
