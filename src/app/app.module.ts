@@ -8,12 +8,13 @@ import {HomeComponent} from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
-import {AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule } from './approuting.module';
 import { MenuComponent } from './menu/menu.component';
 import { MyblogsComponent } from './myblogs/myblogs.component';
 import { CreateComponent } from './create/create.component';
-import {NgxEditorModule} from 'ngx-editor';
 import {HttpClientModule} from '@angular/common/http';
+import { ViewComponent } from './view/view.component';
+import { ProfileComponent } from './profile/profile.component';
 
 let config = {
     apiKey: "AIzaSyATB_vE19LCfsmIfhf1feh1SsaZ8jtKwQE",
@@ -27,8 +28,8 @@ let config = {
 firebase.initializeApp(config)
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ,AppRoutingModule,NgxEditorModule,HttpClientModule],
-  declarations: [ AppComponent,  SignupComponent, LoginComponent, HomeComponent, MenuComponent, MyblogsComponent, CreateComponent, PostComponent, ViewComponent, ProfileComponent ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ,AppRoutingModule,HttpClientModule],
+  declarations: [ AppComponent,  SignupComponent, LoginComponent, HomeComponent, MenuComponent, MyblogsComponent, CreateComponent,  ViewComponent, ProfileComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]
 })

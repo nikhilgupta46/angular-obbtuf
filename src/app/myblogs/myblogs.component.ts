@@ -22,35 +22,4 @@ export class MyblogsComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  getPosts(){
-    // get the list of posts
-
-    firebase.firestore().collection("posts")
-    .orderBy("created", "desc")
-    .get().then((querySnapshot) => {
-
-      console.log(querySnapshot.docs);
-      this.posts = querySnapshot.docs;
-
-    }).catch((err) => {
-      console.log(err);
-    })
-
-  }
-
-  onPostCreated(){
-    // refresh the list of posts
-    this.posts = [];
-    this.getPosts();
-
-  }
-
-  onDelete(){
-    // refresh the list of posts
-    this.posts = [];
-    this.getPosts();
-  }
-
-}
+  }}
